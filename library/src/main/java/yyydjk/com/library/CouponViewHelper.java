@@ -24,13 +24,13 @@ public class CouponViewHelper {
     private Paint dashLinePaint;
 
     //半圆之间间距
-    private float semicicleGap = 4;
+    private float semicicleGap = 8;
 
     //半圆半径
-    private float semicircleRadius = 4;
+    private float semicircleRadius = 8;
 
     //半圆颜色
-    private int semicircleColor = 0xffffff;
+    private int semicircleColor = 0xFFFFFFFF;
 
     //半圆数量X
     private int semicircleNumX;
@@ -47,17 +47,20 @@ public class CouponViewHelper {
     //虚线的长度
     private float dashLineLength = 8;
 
+    //虚线的高度
+    private float dashLineHeight = 2;
+
     //虚线的间距
-    private float dashLineGap = 4;
+    private float dashLineGap = 8;
 
     //虚线的颜色
-    private int dashLineColor = 0xffffff;
+    private int dashLineColor = 0xFFFFFFFF;
 
     //绘制虚线后X轴剩余距离
-    private float remindDashLineX;
+    private int remindDashLineX;
 
     //绘制虚线后Y轴剩余距离
-    private float remindDashLineY;
+    private int remindDashLineY;
 
     //虚线数量X
     private int dashLineNumX;
@@ -66,19 +69,19 @@ public class CouponViewHelper {
     private int dashLineNumY;
 
     //开启顶部半圆曲线
-    private boolean isTopSemicircle;
+    private boolean isTopSemicircle = true;
 
     //开启底部半圆曲线
-    private boolean isBottomSemicircle;
+    private boolean isBottomSemicircle = true;
 
     //开启左边半圆曲线
-    private boolean isLeftSemicircle;
+    private boolean isLeftSemicircle = true;
 
     //开启左边半圆曲线
-    private boolean isRightSemicircle;
+    private boolean isRightSemicircle = true;
 
     //开启顶部虚线
-    private boolean isTopDashLine;
+    private boolean isTopDashLine = true;
 
     //开启底部虚线
     private boolean isBottomDashLine;
@@ -113,7 +116,7 @@ public class CouponViewHelper {
         dashLinePaint.setStyle(Paint.Style.FILL);
     }
 
-    public void onSizeChanged(int w, int h, int oldw, int oldh) {
+    public void onSizeChanged(int w, int h) {
         if (isTopSemicircle && remindSemicircleX == 0 || isBottomSemicircle && remindSemicircleX == 0) {
             remindSemicircleX = (w - dp2Px(semicicleGap)) % (2 * dp2Px(semicircleRadius) + dp2Px(semicicleGap));
             semicircleNumX = (w - dp2Px(semicicleGap)) / (2 * dp2Px(semicircleRadius) + dp2Px(semicicleGap));
@@ -125,7 +128,7 @@ public class CouponViewHelper {
         }
 
         if (isTopDashLine && remindDashLineX == 0 || isBottomDashLine && remindDashLineX == 0) {
-            remindDashLineX = (w - dp2Px(dashLineGap - view.getPaddingLeft() - view.getPaddingRight()) % (dp2Px(dashLineLength) + dp2Px(dashLineGap)));
+            remindDashLineX = (w - dp2Px(dashLineGap) - view.getPaddingLeft() - view.getPaddingRight()) % (dp2Px(dashLineLength) + dp2Px(dashLineGap));
             dashLineNumX = (w - dp2Px(dashLineGap) - view.getPaddingLeft() - view.getPaddingRight()) / (dp2Px(dashLineLength) + dp2Px(dashLineGap));
         }
 
@@ -137,7 +140,35 @@ public class CouponViewHelper {
     }
 
     public void onDraw(Canvas canvas) {
-
+        if (isTopSemicircle)
+            for (int i = 0; i < semicircleNumX; i++) {
+                float x = dp2Px(semicicleGap) + dp2Px(semicircleRadius) + remindSemicircleX / 2 + (dp2Px(semicicleGap) + dp2Px(semicircleRadius) * 2) * i;
+                canvas.drawCircle(x, 0, dp2Px(semicircleRadius), semicirclePaint);
+            }
+        if (isBottomSemicircle)
+            for (int i = 0; i < semicircleNumX; i++) {
+                float x = dp2Px(semicicleGap) + dp2Px(semicircleRadius) + remindSemicircleX / 2 + (dp2Px(semicicleGap) + dp2Px(semicircleRadius) * 2) * i;
+                canvas.drawCircle(x, view.getHeight(), dp2Px(semicircleRadius), semicirclePaint);
+            }
+        if (isLeftSemicircle)
+            for (int i = 0; i < semicircleNumY; i++) {
+                float y = dp2Px(semicicleGap) + dp2Px(semicircleRadius) + remindSemicircleY / 2 + (dp2Px(semicicleGap) + dp2Px(semicircleRadius) * 2) * i;
+                canvas.drawCircle(0, y, dp2Px(semicircleRadius), semicirclePaint);
+            }
+        if (isRightSemicircle)
+            for (int i = 0; i < semicircleNumY; i++) {
+                float y = dp2Px(semicicleGap) + dp2Px(semicircleRadius) + remindSemicircleY / 2 + (dp2Px(semicicleGap) + dp2Px(semicircleRadius) * 2) * i;
+                canvas.drawCircle(view.getWidth(), y, dp2Px(semicircleRadius), semicirclePaint);
+            }
+        if (isTopDashLine)
+            for (int i = 0; i < dashLineNumX; i++) {
+                float x = view.getPaddingLeft() + remindDashLineX / 2 + (dp2Px(dashLineGap) + dp2Px(dashLineLength)) * i;
+                canvas.drawRect(x,
+                        view.getPaddingTop(),
+                        x + dp2Px(dashLineLength),
+                        view.getPaddingTop() + dp2Px(dashLineHeight),
+                        dashLinePaint);
+            }
     }
 
     private int dp2Px(float dp) {
