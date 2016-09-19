@@ -3,7 +3,7 @@
 
 ![couponView.png](http://upload-images.jianshu.io/upload_images/697635-b612818452d2d91c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍微介绍。
+我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍后介绍。
 
 ##项目导入
 在android工程根目录的build.gradle添加
