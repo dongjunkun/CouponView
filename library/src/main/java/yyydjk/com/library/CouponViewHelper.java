@@ -100,6 +100,9 @@ public class CouponViewHelper {
     //开启左边虚线
     private boolean isRightDashLine = true;
 
+    private int viewWidth;
+    private int viewHeight;
+
 
     public CouponViewHelper(View view, Context context, AttributeSet attrs, int defStyle) {
         this.context = context;
@@ -140,26 +143,31 @@ public class CouponViewHelper {
     }
 
     public void onSizeChanged(int w, int h) {
+        viewWidth = w;
+        viewHeight = h;
+        calculate();
+    }
+
+    private void calculate() {
         if (isTopSemicircle && remindSemicircleX == 0 || isBottomSemicircle && remindSemicircleX == 0) {
-            remindSemicircleX = (int) ((w - semicircleGap) % (2 * semicircleRadius + semicircleGap));
-            semicircleNumX = (int) ((w - semicircleGap) / (2 * semicircleRadius + semicircleGap));
+            remindSemicircleX = (int) ((viewWidth - semicircleGap) % (2 * semicircleRadius + semicircleGap));
+            semicircleNumX = (int) ((viewWidth - semicircleGap) / (2 * semicircleRadius + semicircleGap));
         }
 
         if (isLeftSemicircle && remindSemicircleY == 0 || isRightSemicircle && remindSemicircleY == 0) {
-            remindSemicircleY = (int) ((h - semicircleGap) % (2 * semicircleRadius + semicircleGap));
-            semicircleNumY = (int) ((h - semicircleGap) / (2 * semicircleRadius + semicircleGap));
+            remindSemicircleY = (int) ((viewHeight - semicircleGap) % (2 * semicircleRadius + semicircleGap));
+            semicircleNumY = (int) ((viewHeight - semicircleGap) / (2 * semicircleRadius + semicircleGap));
         }
 
         if (isTopDashLine && remindDashLineX == 0 || isBottomDashLine && remindDashLineX == 0) {
-            remindDashLineX = (int) ((w + dashLineGap - view.getPaddingLeft() - view.getPaddingRight()) % (dashLineLength + dashLineGap));
-            dashLineNumX = (int) ((w + dashLineGap - view.getPaddingLeft() - view.getPaddingRight()) / (dashLineLength + dashLineGap));
+            remindDashLineX = (int) ((viewWidth + dashLineGap - view.getPaddingLeft() - view.getPaddingRight()) % (dashLineLength + dashLineGap));
+            dashLineNumX = (int) ((viewWidth + dashLineGap - view.getPaddingLeft() - view.getPaddingRight()) / (dashLineLength + dashLineGap));
         }
 
         if (isLeftDashLine && remindDashLineY == 0 || isRightDashLine && remindDashLineY == 0) {
-            remindDashLineY = (int) ((h + dashLineGap - view.getPaddingTop() - view.getPaddingBottom()) % (dashLineLength + dashLineGap));
-            dashLineNumY = (int) ((h + dashLineGap - view.getPaddingTop() - view.getPaddingBottom()) / (dashLineLength + dashLineGap));
+            remindDashLineY = (int) ((viewHeight + dashLineGap - view.getPaddingTop() - view.getPaddingBottom()) % (dashLineLength + dashLineGap));
+            dashLineNumY = (int) ((viewHeight + dashLineGap - view.getPaddingTop() - view.getPaddingBottom()) / (dashLineLength + dashLineGap));
         }
-
     }
 
     public void onDraw(Canvas canvas) {
@@ -218,8 +226,11 @@ public class CouponViewHelper {
     }
 
     public void setSemicircleGap(float semicircleGap) {
-        this.semicircleGap = semicircleGap;
-        view.invalidate();
+        if (this.semicircleGap != semicircleGap) {
+            this.semicircleGap = semicircleGap;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public float getSemicircleRadius() {
@@ -227,8 +238,11 @@ public class CouponViewHelper {
     }
 
     public void setSemicircleRadius(float semicircleRadius) {
-        this.semicircleRadius = semicircleRadius;
-        view.invalidate();
+        if (this.semicircleRadius != semicircleRadius) {
+            this.semicircleRadius = semicircleRadius;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public int getSemicircleColor() {
@@ -238,6 +252,7 @@ public class CouponViewHelper {
     public void setSemicircleColor(int semicircleColor) {
         if (this.semicircleColor != semicircleColor) {
             this.semicircleColor = semicircleColor;
+            calculate();
             view.invalidate();
         }
     }
@@ -247,8 +262,12 @@ public class CouponViewHelper {
     }
 
     public void setDashLineLength(float dashLineLength) {
-        this.dashLineLength = dashLineLength;
-        view.invalidate();
+        if (this.dashLineLength != dashLineLength) {
+            this.dashLineLength = dashLineLength;
+            calculate();
+            calculate();
+            view.invalidate();
+        }
     }
 
     public float getDashLineHeight() {
@@ -256,8 +275,11 @@ public class CouponViewHelper {
     }
 
     public void setDashLineHeight(float dashLineHeight) {
-        this.dashLineHeight = dashLineHeight;
-        view.invalidate();
+        if (this.dashLineHeight != dashLineHeight) {
+            this.dashLineHeight = dashLineHeight;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public float getDashLineGap() {
@@ -265,8 +287,11 @@ public class CouponViewHelper {
     }
 
     public void setDashLineGap(float dashLineGap) {
-        this.dashLineGap = dashLineGap;
-        view.invalidate();
+        if (this.dashLineGap != dashLineGap) {
+            this.dashLineGap = dashLineGap;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public int getDashLineColor() {
@@ -274,7 +299,11 @@ public class CouponViewHelper {
     }
 
     public void setDashLineColor(int dashLineColor) {
-        this.dashLineColor = dashLineColor;
+        if (this.dashLineColor != dashLineColor) {
+            this.dashLineColor = dashLineColor;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isTopSemicircle() {
@@ -282,7 +311,11 @@ public class CouponViewHelper {
     }
 
     public void setTopSemicircle(boolean topSemicircle) {
-        isTopSemicircle = topSemicircle;
+        if (this.isTopSemicircle != topSemicircle) {
+            isTopSemicircle = topSemicircle;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isBottomSemicircle() {
@@ -290,7 +323,11 @@ public class CouponViewHelper {
     }
 
     public void setBottomSemicircle(boolean bottomSemicircle) {
-        isBottomSemicircle = bottomSemicircle;
+        if (isBottomSemicircle != bottomSemicircle) {
+            isBottomSemicircle = bottomSemicircle;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isLeftSemicircle() {
@@ -298,7 +335,11 @@ public class CouponViewHelper {
     }
 
     public void setLeftSemicircle(boolean leftSemicircle) {
-        isLeftSemicircle = leftSemicircle;
+        if (isLeftSemicircle != leftSemicircle) {
+            isLeftSemicircle = leftSemicircle;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isRightSemicircle() {
@@ -306,7 +347,11 @@ public class CouponViewHelper {
     }
 
     public void setRightSemicircle(boolean rightSemicircle) {
-        isRightSemicircle = rightSemicircle;
+        if (isRightSemicircle != rightSemicircle) {
+            isRightSemicircle = rightSemicircle;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isTopDashLine() {
@@ -314,7 +359,11 @@ public class CouponViewHelper {
     }
 
     public void setTopDashLine(boolean topDashLine) {
-        isTopDashLine = topDashLine;
+        if (isTopDashLine != topDashLine) {
+            isTopDashLine = topDashLine;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isBottomDashLine() {
@@ -322,7 +371,11 @@ public class CouponViewHelper {
     }
 
     public void setBottomDashLine(boolean bottomDashLine) {
-        isBottomDashLine = bottomDashLine;
+        if (isBottomDashLine != bottomDashLine) {
+            isBottomDashLine = bottomDashLine;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isLeftDashLine() {
@@ -330,7 +383,11 @@ public class CouponViewHelper {
     }
 
     public void setLeftDashLine(boolean leftDashLine) {
-        isLeftDashLine = leftDashLine;
+        if (isLeftDashLine != leftDashLine) {
+            isLeftDashLine = leftDashLine;
+            calculate();
+            view.invalidate();
+        }
     }
 
     public boolean isRightDashLine() {
@@ -338,6 +395,10 @@ public class CouponViewHelper {
     }
 
     public void setRightDashLine(boolean rightDashLine) {
-        isRightDashLine = rightDashLine;
+        if (isRightDashLine != rightDashLine) {
+            isRightDashLine = rightDashLine;
+            calculate();
+            view.invalidate();
+        }
     }
 }

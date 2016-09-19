@@ -5,5 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="yyydjk.com.couponview.fragments.CouponListFragment"/>
+    tools:context="yyydjk.com.couponview.fragments.CouponSemiCircleFragment"/>
 

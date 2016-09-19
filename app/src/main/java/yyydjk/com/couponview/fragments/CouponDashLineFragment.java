@@ -25,7 +25,7 @@ import yyydjk.com.library.CouponView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CouponGridFragment extends Fragment {
+public class CouponDashLineFragment extends Fragment {
 
 
     @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
@@ -49,18 +49,11 @@ public class CouponGridFragment extends Fragment {
         for (int anIntArray : intArray) {
             list.add(anIntArray);
         }
-        commonAdapter = new CommonAdapter<Integer>(getActivity(), R.layout.item_coupon_gird, list) {
+        commonAdapter = new CommonAdapter<Integer>(getActivity(), R.layout.item_coupon_dash_line, list) {
             @Override
             protected void convert(ViewHolder holder, Integer s, int position) {
                 CouponView couponView = holder.getView(R.id.couponView);
                 couponView.setBackgroundColor(s);
-                if (position % 3 == 0){
-                    couponView.setTopSemicircle(true);
-                    couponView.setTopDashLine(false);
-                }else {
-                    couponView.setTopSemicircle(false);
-                    couponView.setTopDashLine(true);
-                }
             }
         };
         mRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {

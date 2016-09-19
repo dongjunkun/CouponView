@@ -25,7 +25,7 @@ import yyydjk.com.library.CouponView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CouponListFragment extends Fragment {
+public class CouponSemiCircleFragment extends Fragment {
 
 
     @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
@@ -51,7 +51,7 @@ public class CouponListFragment extends Fragment {
         for (int anIntArray : intArray) {
             list.add(anIntArray);
         }
-        commonAdapter = new CommonAdapter<Integer>(getActivity(), R.layout.item_coupon_list, list) {
+        commonAdapter = new CommonAdapter<Integer>(getActivity(), R.layout.item_coupon_semi_circle, list) {
             @Override
             protected void convert(ViewHolder holder, Integer s, int position) {
                 CouponView couponView = holder.getView(R.id.couponView);

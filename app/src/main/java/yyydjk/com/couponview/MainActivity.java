@@ -13,15 +13,17 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import yyydjk.com.couponview.fragments.CouponGridFragment;
-import yyydjk.com.couponview.fragments.CouponListFragment;
+import yyydjk.com.couponview.fragments.CouponCombinationFragment;
+import yyydjk.com.couponview.fragments.CouponCustomFragment;
+import yyydjk.com.couponview.fragments.CouponDashLineFragment;
+import yyydjk.com.couponview.fragments.CouponSemiCircleFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.tab) TabLayout mTab;
     @Bind(R.id.pager) ViewPager mPager;
 
-    private List<String> titles = Arrays.asList("列表","自定义","卡片");
+    private List<String> titles = Arrays.asList("半圆边缘","虚线边框","半圆虚线","自定义");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +43,15 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    return new CouponListFragment();
+                    return new CouponSemiCircleFragment();
                 case 1:
-                    return new CouponGridFragment();
+                    return new CouponDashLineFragment();
+                case 2:
+                    return new CouponCombinationFragment();
+                case 3:
+                    return new CouponCustomFragment();
                 default:
-                    return new CouponListFragment();
+                    return new CouponSemiCircleFragment();
             }
 
         }
