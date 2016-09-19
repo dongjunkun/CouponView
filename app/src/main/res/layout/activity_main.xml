@@ -5,6 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,9 +13,25 @@
     tools:context="yyydjk.com.couponview.MainActivity">
 
     <yyydjk.com.library.CouponView
-        android:padding="20dp"
-        android:background="@color/colorPrimary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        app:cv_dash_line_color="@color/colorAccent"
+        app:cv_dash_line_gap="5dp"
+        app:cv_dash_line_height="2dp"
+        app:cv_dash_line_length="10dp"
+        app:cv_is_bottom_dash_line="true"
+        app:cv_is_bottom_semicircle="true"
+        app:cv_is_left_dash_line="true"
+        app:cv_is_left_semicircle="true"
+        app:cv_is_right_dash_line="true"
+        app:cv_is_right_semicircle="true"
+        app:cv_is_top_dash_line="true"
+        app:cv_is_top_semicircle="true"
+        app:cv_semicircle_color="@color/colorAccent"
+        app:cv_semicircle_gap="8dp"
+        app:cv_semicircle_radius="4dp"/>
 
 </RelativeLayout>

@@ -1,8 +1,20 @@
 <resources>
+
     <declare-styleable name="CouponView">
-        <attr name="exampleString" format="string"/>
-        <attr name="exampleDimension" format="dimension"/>
-        <attr name="exampleColor" format="color"/>
-        <attr name="exampleDrawable" format="color|reference"/>
+        <attr name="cv_semicircle_gap" format="dimension|reference"/>
+        <attr name="cv_semicircle_radius" format="dimension|reference"/>
+        <attr name="cv_semicircle_color" format="color|reference"/>
+        <attr name="cv_dash_line_length" format="dimension|reference"/>
+        <attr name="cv_dash_line_gap" format="dimension|reference"/>
+        <attr name="cv_dash_line_height" format="dimension|reference"/>
+        <attr name="cv_dash_line_color" format="color|reference"/>
+        <attr name="cv_is_top_semicircle" format="boolean|reference"/>
+        <attr name="cv_is_bottom_semicircle" format="boolean|reference"/>
+        <attr name="cv_is_left_semicircle" format="boolean|reference"/>
+        <attr name="cv_is_right_semicircle" format="boolean|reference"/>
+        <attr name="cv_is_top_dash_line" format="boolean|reference"/>
+        <attr name="cv_is_bottom_dash_line" format="boolean|reference"/>
+        <attr name="cv_is_left_dash_line" format="boolean|reference"/>
+        <attr name="cv_is_right_dash_line" format="boolean|reference"/>
     </declare-styleable>
 </resources>
