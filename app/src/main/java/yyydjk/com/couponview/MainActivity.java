@@ -16,6 +16,7 @@ import butterknife.ButterKnife;
 import yyydjk.com.couponview.fragments.CouponCombinationFragment;
 import yyydjk.com.couponview.fragments.CouponCustomFragment;
 import yyydjk.com.couponview.fragments.CouponDashLineFragment;
+import yyydjk.com.couponview.fragments.CouponImageViewFragment;
 import yyydjk.com.couponview.fragments.CouponSemiCircleFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.tab) TabLayout mTab;
     @Bind(R.id.pager) ViewPager mPager;
 
-    private List<String> titles = Arrays.asList("半圆边缘","虚线边框","半圆虚线","自定义");
+    private List<String> titles = Arrays.asList("半圆边缘", "虚线边框", "半圆虚线", "自定义属性", "自定义ImageView");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         mPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         mTab.setupWithViewPager(mPager);
     }
-    public class MyPagerAdapter extends FragmentPagerAdapter{
+
+    public class MyPagerAdapter extends FragmentPagerAdapter {
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position){
+            switch (position) {
                 case 0:
                     return new CouponSemiCircleFragment();
                 case 1:
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                     return new CouponCombinationFragment();
                 case 3:
                     return new CouponCustomFragment();
+                case 4:
+                    return new CouponImageViewFragment();
                 default:
                     return new CouponSemiCircleFragment();
             }

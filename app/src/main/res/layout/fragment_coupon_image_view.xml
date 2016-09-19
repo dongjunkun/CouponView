@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:padding="10dp"
+             android:layout_height="match_parent"
+             tools:context="yyydjk.com.couponview.fragments.CouponImageViewFragment">
+
+    <yyydjk.com.couponview.widget.CouponImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/couponView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@mipmap/image"
+        android:scaleType="centerCrop"
+        app:cv_dash_line_color="@android:color/white"
+        app:cv_dash_line_gap="5dp"
+        app:cv_dash_line_height="2dp"
+        app:cv_dash_line_length="10dp"
+        app:cv_is_bottom_dash_line="false"
+        app:cv_is_bottom_semicircle="true"
+        app:cv_is_left_dash_line="false"
+        app:cv_is_left_semicircle="true"
+        app:cv_is_right_dash_line="false"
+        app:cv_is_right_semicircle="true"
+        app:cv_is_top_dash_line="false"
+        app:cv_is_top_semicircle="true"
+        app:cv_semicircle_color="@android:color/white"
+        app:cv_semicircle_gap="8dp"
+        app:cv_semicircle_radius="6dp"/>
+
+
+</FrameLayout>
