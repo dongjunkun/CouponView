@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="colors">
+        <item>@color/colorBluePrimary</item>
+        <item>@color/colorRedPrimary</item>
+        <item>@color/colorBrownPrimary</item>
+        <item>@color/colorGreenPrimary</item>
+        <item>@color/colorPurplePrimary</item>
+        <item>@color/colorTealPrimary</item>
+        <item>@color/colorPinkPrimary</item>
+        <item>@color/colorDeepPurplePrimary</item>
+        <item>@color/colorOrangePrimary</item>
+        <item>@color/colorIndigoPrimary</item>
+        <item>@color/colorCyanPrimary</item>
+        <item>@color/colorLightGreenPrimary</item>
+        <item>@color/colorLimePrimary</item>
+        <item>@color/colorDeepOrangePrimary</item>
+        <item>@color/colorBlueGreyPrimary</item>
+    </array>
+    <!--blue-->
+    <color name="colorBluePrimary">#2196F3</color>
+
+    <!--red-->
+    <color name="colorRedPrimary">#F44336</color>
+
+    <!--brown-->
+    <color name="colorBrownPrimary">#795548</color>
+
+    <!--green-->
+    <color name="colorGreenPrimary">#4CAF50</color>
+
+    <!--purple-->
+    <color name="colorPurplePrimary">#9c27b0</color>
+
+    <!--teal-->
+    <color name="colorTealPrimary">#009688</color>
+
+    <!--pink-->
+    <color name="colorPinkPrimary">#E91E63</color>
+
+    <!--deepPurple-->
+    <color name="colorDeepPurplePrimary">#673AB7</color>
+
+    <!--orange-->
+    <color name="colorOrangePrimary">#FF9800</color>
+
+    <!--indigo-->
+    <color name="colorIndigoPrimary">#3F51B5</color>
+
+    <!--cyan-->
+    <color name="colorCyanPrimary">#00BCD4</color>
+
+    <!--lightGreen-->
+    <color name="colorLightGreenPrimary">#8BC34A</color>
+
+    <!--lime-->
+    <color name="colorLimePrimary">#CDDC39</color>
+
+    <!--deepOrange-->
+    <color name="colorDeepOrangePrimary">#FF5722</color>
+
+    <!--blueGrey-->
+    <color name="colorBlueGreyPrimary">#607D8B</color>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
