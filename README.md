@@ -1,7 +1,9 @@
 ##介绍
-最近项目中刚好需要做优惠券效果，其他的都不难，关键在一个半圆锯齿和虚线边框的绘制，当然可以使用png图片作为背景来实现，这样很简单，但这样做会拉低整个App的档次，效果不好，修改也麻烦，之前看过网上有人用代码实现了这个效果，看了下原理，但始终用起来问题比较多，自己就稍微总结了下，整理一个可以简单自定义效果的库，可以先看看效果图
+最近项目中刚好需要做优惠券效果，其他的都不难，关键在一个半圆锯齿和虚线边框的绘制，当然可以使用png图片作为背景来实现，这样很简单，但这样做会拉低整个App的档次，效果不好，修改也麻烦，之前看过网上有人用代码实现了这个效果，看了下原理，但始终用起来问题比较多，使用不灵活，自己就稍微总结了下，整理一个可以简单自定义效果的库，可以先看看效果图
 
-![couponView.png](http://upload-images.jianshu.io/upload_images/697635-b612818452d2d91c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![preview.png](http://upload-images.jianshu.io/upload_images/697635-9cf7828e44a55e4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍后介绍。
 
@@ -41,6 +43,10 @@ dependencies {
 |cv_is_bottom_dash_line|boolean|是否绘制底部虚线|
 |cv_is_left_dash_line|boolean|是否绘制左侧虚线|
 |cv_is_right_dash_line|boolean|是否绘制右侧虚线|
+|cv_top_dash_line_margin|dimension|顶部虚线距离View顶部的距离|
+|cv_bottom_dash_line_margin|dimension|底部虚线距离View底部的距离|
+|cv_left_dash_line_margin|dimension|左侧虚线距离View左侧的距离|
+|cv_right_dash_line_margin|dimension|右侧虚线距离View右侧的距离|
 
 使用
 ~~~
@@ -75,7 +81,7 @@ dependencies {
  - CouponView是继承于FrameLayout，除了边缘锯齿和虚线边框外，和普通的FrameLayout没有区别
 
 ##定制自己的View
-可以通过CouponViewHelper这个代理类来给其他View（比如LinearLayout,ImageView,TextView）添加锯齿背景，只需要继承其他View然后添加以下代码就可以了
+可以通过CouponViewHelper这个代理类来给其他View（比如LinearLayout,ImageView,TextView）添加锯齿背景，只需要继承其他View然后添加以下代码就可以，完整代码参考[CouponView](https://github.com/dongjunkun/CouponView)
 ~~~
 public class CustomView extends YourView{
 
@@ -122,114 +128,48 @@ public class CustomView extends YourView{
         helper.setSemicircleRadius(semicircleRadius);
     }
 
-    public int getSemicircleColor() {
-        return helper.getSemicircleColor();
-    }
-
-    public void setSemicircleColor(int semicircleColor) {
-        helper.setSemicircleColor(semicircleColor);
-    }
-
-    public float getDashLineLength() {
-        return helper.getDashLineLength();
-    }
-
-    public void setDashLineLength(float dashLineLength) {
-        helper.setDashLineLength(dashLineLength);
-    }
-
-    public float getDashLineHeight() {
-        return helper.getDashLineHeight();
-    }
-
-    public void setDashLineHeight(float dashLineHeight) {
-        helper.setDashLineHeight(dashLineHeight);
-    }
-
-    public float getDashLineGap() {
-        return helper.getDashLineGap();
-    }
-
-    public void setDashLineGap(float dashLineGap) {
-        helper.setDashLineGap(dashLineGap);
-    }
-
-    public int getDashLineColor() {
-        return helper.getDashLineColor();
-    }
-
-    public void setDashLineColor(int dashLineColor) {
-        helper.setDashLineColor(dashLineColor);
-    }
-
-    public boolean isTopSemicircle() {
-        return helper.isTopSemicircle();
-    }
-
-    public void setTopSemicircle(boolean topSemicircle) {
-        helper.setTopSemicircle(topSemicircle);
-    }
-
-    public boolean isBottomSemicircle() {
-        return helper.isBottomSemicircle();
-    }
-
-    public void setBottomSemicircle(boolean bottomSemicircle) {
-        helper.setBottomSemicircle(bottomSemicircle);
-    }
-
-    public boolean isLeftSemicircle() {
-        return helper.isLeftSemicircle();
-    }
-
-    public void setLeftSemicircle(boolean leftSemicircle) {
-        helper.setLeftSemicircle(leftSemicircle);
-    }
-
-    public boolean isRightSemicircle() {
-        return helper.isRightSemicircle();
-    }
-
-    public void setRightSemicircle(boolean rightSemicircle) {
-       helper.setRightSemicircle(rightSemicircle);
-    }
-
-    public boolean isTopDashLine() {
-        return helper.isTopDashLine();
-    }
-
-    public void setTopDashLine(boolean topDashLine) {
-       helper.setTopDashLine(topDashLine);
-    }
-
-    public boolean isBottomDashLine() {
-        return helper.isBottomDashLine();
-    }
-
-    public void setBottomDashLine(boolean bottomDashLine) {
-       helper.setBottomDashLine(bottomDashLine);
-    }
-
-    public boolean isLeftDashLine() {
-        return helper.isLeftDashLine();
-    }
-
-    public void setLeftDashLine(boolean leftDashLine) {
-       helper.setLeftDashLine(leftDashLine);
-    }
-
-    public boolean isRightDashLine() {
-        return helper.isRightDashLine();
-    }
-
-    public void setRightDashLine(boolean rightDashLine) {
-       helper.setRightDashLine(rightDashLine);
-    }
+   ......
 }
 
 ~~~
-可以轻松的让一个ImageView变成这样，效果图如下
 
-![Paste_Image.png](http://upload-images.jianshu.io/upload_images/697635-8aecc468ca89ccac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+比如继承ImageView
+~~~
+ <yyydjk.com.couponview.widget.CouponImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/couponView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:src="@mipmap/image"
+        android:scaleType="centerCrop"
+        app:cv_dash_line_color="@android:color/white"
+        app:cv_dash_line_gap="5dp"
+        app:cv_dash_line_height="2dp"
+        app:cv_dash_line_length="10dp"
+        app:cv_is_bottom_dash_line="false"
+        app:cv_is_bottom_semicircle="true"
+        app:cv_is_left_dash_line="true"
+        app:cv_is_left_semicircle="false"
+        app:cv_is_right_dash_line="true"
+        app:cv_is_right_semicircle="false"
+        app:cv_is_top_dash_line="false"
+        app:cv_is_top_semicircle="true"
+        app:cv_semicircle_color="@android:color/white"
+        app:cv_semicircle_gap="8dp"
+        app:cv_semicircle_radius="6dp"/>
+~~~
+效果图如下
 
+![Paste_Image.png](http://upload-images.jianshu.io/upload_images/697635-5094ede1c89f62b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+更多自定义属性可以通过我的Demo体验
+
+![customCoupon.png](http://upload-images.jianshu.io/upload_images/697635-23dffa1ad627a48e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+下载demo：[CouponView](http://fir.im/a6ud)
+
+
+参考资料：
+ - [[Android 自定义优惠券布局](http://blog.csdn.net/u012162503/article/details/51433490)](http://blog.csdn.net/u012162503/article/details/51433490)
 
