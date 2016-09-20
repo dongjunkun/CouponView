@@ -4,6 +4,6 @@
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context="yyydjk.com.couponview.fragments.CouponSemiCircleFragment"/>
+    tools:context="yyydjk.com.couponview.fragments.CouponSemiCircleFragment"
+    tools:listitem="@layout/fragment_coupon_image_view"/>
 

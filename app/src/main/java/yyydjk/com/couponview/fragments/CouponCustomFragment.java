@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.SeekBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -30,6 +31,15 @@ public class CouponCustomFragment extends Fragment {
     @Bind(R.id.dash_line_bottom) CheckBox mDashLineBottom;
     @Bind(R.id.dash_line_left) CheckBox mDashLineLeft;
     @Bind(R.id.dash_line_right) CheckBox mDashLineRight;
+    @Bind(R.id.sbSemicircleRadius) SeekBar mSbSemicircleRadius;
+    @Bind(R.id.sbSemicircleCap) SeekBar mSbSemicircleCap;
+    @Bind(R.id.sbDashLineLength) SeekBar mSbDashLineLength;
+    @Bind(R.id.sbDashLineGap) SeekBar mSbDashLineGap;
+    @Bind(R.id.sbDashLineHeight) SeekBar mSbDashLineHeight;
+    @Bind(R.id.sbTopDashLineMargin) SeekBar mSbTopDashLineMargin;
+    @Bind(R.id.sbBottomDashLineMargin) SeekBar mSbBottomDashLineMargin;
+    @Bind(R.id.sbLeftDashLineMargin) SeekBar mSbLeftDashLineMargin;
+    @Bind(R.id.sbRightDashLineMargin) SeekBar mSbRightDashLineMargin;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -92,6 +102,168 @@ public class CouponCustomFragment extends Fragment {
                 mCouponView.setRightDashLine(isChecked);
             }
         });
+        mSbSemicircleRadius.setProgress((int) mCouponView.getSemicircleRadius());
+        mSbSemicircleRadius.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setSemicircleRadius(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        mSbSemicircleCap.setProgress((int) mCouponView.getSemicircleGap());
+        mSbSemicircleCap.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setSemicircleGap(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSbDashLineLength.setProgress((int) mCouponView.getDashLineLength());
+        mSbDashLineLength.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setDashLineLength(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSbDashLineGap.setProgress((int) mCouponView.getDashLineGap());
+        mSbDashLineGap.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setDashLineGap(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSbDashLineHeight.setProgress((int) mCouponView.getDashLineHeight() * 10);
+        mSbDashLineHeight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setDashLineHeight(dp2Px(progress) / 10);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSbTopDashLineMargin.setProgress((int) mCouponView.getTopDashLineMargin());
+        mSbTopDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setTopDashLineMargin(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+
+        mSbBottomDashLineMargin.setProgress((int) mCouponView.getBottomDashLineMargin());
+        mSbBottomDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setBottomDashLineMargin(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSbLeftDashLineMargin.setProgress((int) mCouponView.getLeftDashLineMargin());
+        mSbLeftDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setLeftDashLineMargin(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        mSbRightDashLineMargin.setProgress((int) mCouponView.getRightDashLineMargin());
+        mSbRightDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                mCouponView.setRightDashLineMargin(dp2Px(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
@@ -99,4 +271,9 @@ public class CouponCustomFragment extends Fragment {
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
+
+    private int dp2Px(float dp) {
+        return (int) (dp * getActivity().getResources().getDisplayMetrics().density + 0.5f);
+    }
+
 }

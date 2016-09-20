@@ -158,4 +158,36 @@ public class CouponImageView extends ImageView {
     public void setRightDashLine(boolean rightDashLine) {
         helper.setRightDashLine(rightDashLine);
     }
+
+    public float getTopDashLineMargin() {
+        return helper.getTopDashLineMargin();
+    }
+
+    public void setTopDashLineMargin(float topDashLineMargin) {
+        helper.setTopDashLineMargin(topDashLineMargin);
+    }
+
+    public float getBottomDashLineMargin() {
+        return helper.getBottomDashLineMargin();
+    }
+
+    public void setBottomDashLineMargin(float bottomDashLineMargin) {
+        helper.setBottomDashLineMargin(bottomDashLineMargin);
+    }
+
+    public float getLeftDashLineMargin() {
+        return helper.getLeftDashLineMargin();
+    }
+
+    public void setLeftDashLineMargin(float leftDashLineMargin) {
+        helper.setLeftDashLineMargin(leftDashLineMargin);
+    }
+
+    public float getRightDashLineMargin() {
+        return helper.getRightDashLineMargin();
+    }
+
+    public void setRightDashLineMargin(float rightDashLineMargin) {
+        helper.setRightDashLineMargin(rightDashLineMargin);
+    }
 }
