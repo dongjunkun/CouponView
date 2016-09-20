@@ -16,5 +16,9 @@
         <attr name="cv_is_bottom_dash_line" format="boolean|reference"/>
         <attr name="cv_is_left_dash_line" format="boolean|reference"/>
         <attr name="cv_is_right_dash_line" format="boolean|reference"/>
+        <attr name="cv_top_dash_line_margin" format="dimension|reference"/>
+        <attr name="cv_bottom_dash_line_margin" format="dimension|reference"/>
+        <attr name="cv_left_dash_line_margin" format="dimension|reference"/>
+        <attr name="cv_right_dash_line_margin" format="dimension|reference"/>
     </declare-styleable>
 </resources>

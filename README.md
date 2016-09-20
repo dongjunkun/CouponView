@@ -2,7 +2,7 @@
 最近项目中刚好需要做优惠券效果，其他的都不难，关键在一个半圆锯齿和虚线边框的绘制，当然可以使用png图片作为背景来实现，这样很简单，但这样做会拉低整个App的档次，效果不好，修改也麻烦，之前看过网上有人用代码实现了这个效果，看了下原理，但始终用起来问题比较多，使用不灵活，自己就稍微总结了下，整理一个可以简单自定义效果的库，可以先看看效果图
 
 
-![preview.png](http://upload-images.jianshu.io/upload_images/697635-9cf7828e44a55e4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![preview.png](/art/couponView.png)
 
 
 我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍后介绍。

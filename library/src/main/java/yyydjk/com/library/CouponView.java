@@ -119,7 +119,7 @@ public class CouponView extends FrameLayout {
     }
 
     public void setRightSemicircle(boolean rightSemicircle) {
-       helper.setRightSemicircle(rightSemicircle);
+        helper.setRightSemicircle(rightSemicircle);
     }
 
     public boolean isTopDashLine() {
@@ -127,7 +127,7 @@ public class CouponView extends FrameLayout {
     }
 
     public void setTopDashLine(boolean topDashLine) {
-       helper.setTopDashLine(topDashLine);
+        helper.setTopDashLine(topDashLine);
     }
 
     public boolean isBottomDashLine() {
@@ -135,7 +135,7 @@ public class CouponView extends FrameLayout {
     }
 
     public void setBottomDashLine(boolean bottomDashLine) {
-       helper.setBottomDashLine(bottomDashLine);
+        helper.setBottomDashLine(bottomDashLine);
     }
 
     public boolean isLeftDashLine() {
@@ -143,7 +143,7 @@ public class CouponView extends FrameLayout {
     }
 
     public void setLeftDashLine(boolean leftDashLine) {
-       helper.setLeftDashLine(leftDashLine);
+        helper.setLeftDashLine(leftDashLine);
     }
 
     public boolean isRightDashLine() {
@@ -151,6 +151,38 @@ public class CouponView extends FrameLayout {
     }
 
     public void setRightDashLine(boolean rightDashLine) {
-       helper.setRightDashLine(rightDashLine);
+        helper.setRightDashLine(rightDashLine);
+    }
+
+    public float getTopDashLineMargin() {
+        return helper.getTopDashLineMargin();
+    }
+
+    public void setTopDashLineMargin(float topDashLineMargin) {
+        helper.setTopDashLineMargin(topDashLineMargin);
+    }
+
+    public float getBottomDashLineMargin() {
+        return helper.getBottomDashLineMargin();
+    }
+
+    public void setBottomDashLineMargin(float bottomDashLineMargin) {
+        helper.setBottomDashLineMargin(bottomDashLineMargin);
+    }
+
+    public float getLeftDashLineMargin() {
+        return helper.getLeftDashLineMargin();
+    }
+
+    public void setLeftDashLineMargin(float leftDashLineMargin) {
+        helper.setLeftDashLineMargin(leftDashLineMargin);
+    }
+
+    public float getRightDashLineMargin() {
+        return helper.getRightDashLineMargin();
+    }
+
+    public void setRightDashLineMargin(float rightDashLineMargin) {
+        helper.setRightDashLineMargin(rightDashLineMargin);
     }
 }
