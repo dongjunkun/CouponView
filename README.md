@@ -81,6 +81,7 @@ dependencies {
 </yyydjk.com.library.CouponView>
 ~~~
 或者使用代码动态设置
+
 ![couponTip.png](/art/couponTip.png)
 
 ##定制自己的View
