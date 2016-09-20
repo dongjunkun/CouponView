@@ -90,99 +90,99 @@ public class CouponView extends FrameLayout {
         helper.setDashLineColor(dashLineColor);
     }
 
-    public boolean isTopSemicircle() {
-        return helper.isTopSemicircle();
+    public boolean isSemicircleTop() {
+        return helper.isSemicircleTop();
     }
 
-    public void setTopSemicircle(boolean topSemicircle) {
-        helper.setTopSemicircle(topSemicircle);
+    public void setSemicircleTop(boolean semicircleTop) {
+        helper.setSemicircleTop(semicircleTop);
     }
 
-    public boolean isBottomSemicircle() {
-        return helper.isBottomSemicircle();
+    public boolean isSemicircleBottom() {
+        return helper.isSemicircleBottom();
     }
 
-    public void setBottomSemicircle(boolean bottomSemicircle) {
-        helper.setBottomSemicircle(bottomSemicircle);
+    public void setSemicircleBottom(boolean semicircleBottom) {
+        helper.setSemicircleBottom(semicircleBottom);
     }
 
-    public boolean isLeftSemicircle() {
-        return helper.isLeftSemicircle();
+    public boolean isSemicircleLeft() {
+        return helper.isSemicircleLeft();
     }
 
-    public void setLeftSemicircle(boolean leftSemicircle) {
-        helper.setLeftSemicircle(leftSemicircle);
+    public void setSemicircleLeft(boolean semicircleLeft) {
+        helper.setSemicircleLeft(semicircleLeft);
     }
 
-    public boolean isRightSemicircle() {
-        return helper.isRightSemicircle();
+    public boolean isSemicircleRight() {
+        return helper.isSemicircleRight();
     }
 
-    public void setRightSemicircle(boolean rightSemicircle) {
-        helper.setRightSemicircle(rightSemicircle);
+    public void setSemicircleRight(boolean semicircleRight) {
+        helper.setSemicircleRight(semicircleRight);
     }
 
-    public boolean isTopDashLine() {
-        return helper.isTopDashLine();
+    public boolean isDashLineTop() {
+        return helper.isDashLineTop();
     }
 
-    public void setTopDashLine(boolean topDashLine) {
-        helper.setTopDashLine(topDashLine);
+    public void setDashLineTop(boolean dashLineTop) {
+        helper.setDashLineTop(dashLineTop);
     }
 
-    public boolean isBottomDashLine() {
-        return helper.isBottomDashLine();
+    public boolean DashLineBottom() {
+        return helper.isDashLineBottom();
     }
 
-    public void setBottomDashLine(boolean bottomDashLine) {
-        helper.setBottomDashLine(bottomDashLine);
+    public void setDashLineBottom(boolean dashLineBottom) {
+        helper.setDashLineBottom(dashLineBottom);
     }
 
-    public boolean isLeftDashLine() {
-        return helper.isLeftDashLine();
+    public boolean isDashLineLeft() {
+        return helper.isDashLineLeft();
     }
 
-    public void setLeftDashLine(boolean leftDashLine) {
-        helper.setLeftDashLine(leftDashLine);
+    public void setDashLineLeft(boolean dashLineLeft) {
+        helper.setDashLineLeft(dashLineLeft);
     }
 
-    public boolean isRightDashLine() {
-        return helper.isRightDashLine();
+    public boolean isDashLineRight() {
+        return helper.isDashLineRight();
     }
 
-    public void setRightDashLine(boolean rightDashLine) {
-        helper.setRightDashLine(rightDashLine);
+    public void setDashLineRight(boolean dashLineRight) {
+        helper.setDashLineRight(dashLineRight);
     }
 
-    public float getTopDashLineMargin() {
-        return helper.getTopDashLineMargin();
+    public float getDashLineMarginTop() {
+        return helper.getDashLineMarginTop();
     }
 
-    public void setTopDashLineMargin(float topDashLineMargin) {
-        helper.setTopDashLineMargin(topDashLineMargin);
+    public void setDashLineMarginTop(float dashLineMarginTop) {
+        helper.setDashLineMarginTop(dashLineMarginTop);
     }
 
-    public float getBottomDashLineMargin() {
-        return helper.getBottomDashLineMargin();
+    public float getDashLineMarginBottom() {
+        return helper.getDashLineMarginBottom();
     }
 
-    public void setBottomDashLineMargin(float bottomDashLineMargin) {
-        helper.setBottomDashLineMargin(bottomDashLineMargin);
+    public void setDashLineMarginBottom(float dashLineMarginBottom) {
+        helper.setDashLineMarginBottom(dashLineMarginBottom);
     }
 
-    public float getLeftDashLineMargin() {
-        return helper.getLeftDashLineMargin();
+    public float getDashLineMarginLeft() {
+        return helper.getDashLineMarginLeft();
     }
 
-    public void setLeftDashLineMargin(float leftDashLineMargin) {
-        helper.setLeftDashLineMargin(leftDashLineMargin);
+    public void setDashLineMarginLeft(float dashLineMarginLeft) {
+        helper.setDashLineMarginLeft(dashLineMarginLeft);
     }
 
-    public float getRightDashLineMargin() {
-        return helper.getRightDashLineMargin();
+    public float getDashLineMarginRight() {
+        return helper.getDashLineMarginRight();
     }
 
-    public void setRightDashLineMargin(float rightDashLineMargin) {
-        helper.setRightDashLineMargin(rightDashLineMargin);
+    public void setDashLineMarginRight(float dashLineMarginRight) {
+        helper.setDashLineMarginRight(dashLineMarginRight);
     }
 }

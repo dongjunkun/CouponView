@@ -56,50 +56,50 @@ public class CouponCustomFragment extends Fragment {
         mSemicircleTop.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setTopSemicircle(isChecked);
+                mCouponView.setSemicircleTop(isChecked);
             }
         });
         mSemicircleBottom.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setBottomSemicircle(isChecked);
+                mCouponView.setSemicircleBottom(isChecked);
             }
         });
         mSemicircleLeft.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setLeftSemicircle(isChecked);
+                mCouponView.setSemicircleLeft(isChecked);
             }
         });
         mSemicircleRight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setRightSemicircle(isChecked);
+                mCouponView.setSemicircleRight(isChecked);
             }
         });
 
         mDashLineTop.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setTopDashLine(isChecked);
+                mCouponView.setDashLineTop(isChecked);
             }
         });
         mDashLineBottom.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setBottomDashLine(isChecked);
+                mCouponView.setDashLineBottom(isChecked);
             }
         });
         mDashLineLeft.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setLeftDashLine(isChecked);
+                mCouponView.setDashLineLeft(isChecked);
             }
         });
         mDashLineRight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mCouponView.setRightDashLine(isChecked);
+                mCouponView.setDashLineRight(isChecked);
             }
         });
         mSbSemicircleRadius.setProgress((int) mCouponView.getSemicircleRadius());
@@ -191,11 +191,11 @@ public class CouponCustomFragment extends Fragment {
             }
         });
 
-        mSbTopDashLineMargin.setProgress((int) mCouponView.getTopDashLineMargin());
+        mSbTopDashLineMargin.setProgress((int) mCouponView.getDashLineMarginTop());
         mSbTopDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mCouponView.setTopDashLineMargin(dp2Px(progress));
+                mCouponView.setDashLineMarginTop(dp2Px(progress));
             }
 
             @Override
@@ -210,12 +210,11 @@ public class CouponCustomFragment extends Fragment {
         });
 
 
-
-        mSbBottomDashLineMargin.setProgress((int) mCouponView.getBottomDashLineMargin());
+        mSbBottomDashLineMargin.setProgress((int) mCouponView.getDashLineMarginBottom());
         mSbBottomDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mCouponView.setBottomDashLineMargin(dp2Px(progress));
+                mCouponView.setDashLineMarginBottom(dp2Px(progress));
             }
 
             @Override
@@ -229,11 +228,11 @@ public class CouponCustomFragment extends Fragment {
             }
         });
 
-        mSbLeftDashLineMargin.setProgress((int) mCouponView.getLeftDashLineMargin());
+        mSbLeftDashLineMargin.setProgress((int) mCouponView.getDashLineMarginLeft());
         mSbLeftDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mCouponView.setLeftDashLineMargin(dp2Px(progress));
+                mCouponView.setDashLineMarginLeft(dp2Px(progress));
             }
 
             @Override
@@ -247,11 +246,11 @@ public class CouponCustomFragment extends Fragment {
             }
         });
 
-        mSbRightDashLineMargin.setProgress((int) mCouponView.getRightDashLineMargin());
+        mSbRightDashLineMargin.setProgress((int) mCouponView.getDashLineMarginRight());
         mSbRightDashLineMargin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mCouponView.setRightDashLineMargin(dp2Px(progress));
+                mCouponView.setDashLineMarginRight(dp2Px(progress));
             }
 
             @Override

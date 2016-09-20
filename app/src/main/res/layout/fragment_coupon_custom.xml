@@ -15,17 +15,17 @@
         android:background="@color/colorGreenPrimary"
         android:orientation="vertical"
         android:padding="10dp"
-        app:cv_bottom_dash_line_margin="5dp"
         app:cv_dash_line_color="@android:color/white"
         app:cv_dash_line_gap="10dp"
         app:cv_dash_line_height="2dp"
         app:cv_dash_line_length="10dp"
-        app:cv_left_dash_line_margin="50dp"
-        app:cv_right_dash_line_margin="50dp"
+        app:cv_dash_line_margin_bottom="5dp"
+        app:cv_dash_line_margin_left="50dp"
+        app:cv_dash_line_margin_right="50dp"
+        app:cv_dash_line_margin_top="5dp"
         app:cv_semicircle_color="@android:color/white"
         app:cv_semicircle_gap="8dp"
-        app:cv_semicircle_radius="4dp"
-        app:cv_top_dash_line_margin="5dp"/>
+        app:cv_semicircle_radius="4dp"/>
 
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"

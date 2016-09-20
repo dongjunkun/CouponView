@@ -35,18 +35,18 @@ dependencies {
 |cv_semicircle_color|color|半圆的颜色，一般需要和背景色一致|
 |cv_semicircle_gap|dimension|半圆之前的间隔|
 |cv_semicircle_radius|dimension|半圆的半径|
-|cv_is_top_semicircle|boolean|是否绘制顶部半圆锯齿|
-|cv_is_bottom_semicircle|boolean|是否绘制底部半圆锯齿|
-|cv_is_left_semicircle|boolean|是否绘制左侧半圆锯齿|
-|cv_is_right_semicircle|boolean|是否绘制右侧半圆锯齿|
-|cv_is_top_dash_line|boolean|是否绘制顶部虚线|
-|cv_is_bottom_dash_line|boolean|是否绘制底部虚线|
-|cv_is_left_dash_line|boolean|是否绘制左侧虚线|
-|cv_is_right_dash_line|boolean|是否绘制右侧虚线|
-|cv_top_dash_line_margin|dimension|顶部虚线距离View顶部的距离|
-|cv_bottom_dash_line_margin|dimension|底部虚线距离View底部的距离|
-|cv_left_dash_line_margin|dimension|左侧虚线距离View左侧的距离|
-|cv_right_dash_line_margin|dimension|右侧虚线距离View右侧的距离|
+|cv_is_semicircle_top|boolean|是否绘制顶部半圆锯齿|
+|cv_is_semicircle_bottom|boolean|是否绘制底部半圆锯齿|
+|cv_is_semicircle_left|boolean|是否绘制左侧半圆锯齿|
+|cv_is_semicircle_right|boolean|是否绘制右侧半圆锯齿|
+|cv_is_dash_line_top|boolean|是否绘制顶部虚线|
+|cv_is_dash_line_bottom|boolean|是否绘制底部虚线|
+|cv_is_dash_line_left|boolean|是否绘制左侧虚线|
+|cv_is_dash_line_right|boolean|是否绘制右侧虚线|
+|cv_dash_line_margin_top|dimension|顶部虚线距离View顶部的距离|
+|cv_dash_line_margin_bottom|dimension|底部虚线距离View底部的距离|
+|cv_dash_line_margin_left|dimension|左侧虚线距离View左侧的距离|
+|cv_dash_line_margin_right|dimension|右侧虚线距离View右侧的距离|
 
 使用
 ~~~
@@ -62,14 +62,14 @@ dependencies {
     app:cv_dash_line_gap="5dp"
     app:cv_dash_line_height="2dp"
     app:cv_dash_line_length="10dp"
-    app:cv_is_bottom_dash_line="true"
-    app:cv_is_bottom_semicircle="false"
-    app:cv_is_left_dash_line="true"
-    app:cv_is_left_semicircle="false"
-    app:cv_is_right_dash_line="true"
-    app:cv_is_right_semicircle="false"
-    app:cv_is_top_dash_line="true"
-    app:cv_is_top_semicircle="false"
+    app:cv_is_dash_line_bottom="true"
+    app:cv_is_semicircle_bottom="false"
+    app:cv_is_dash_line_left="true"
+    app:cv_is_semicircle_left="false"
+    app:cv_is_dash_line_right="true"
+    app:cv_is_semicircle_right="false"
+    app:cv_is_dash_line_top="true"
+    app:cv_is_semicircle_top="false"
     app:cv_semicircle_color="@android:color/white"
     app:cv_semicircle_gap="8dp"
     app:cv_semicircle_radius="4dp">
@@ -143,14 +143,14 @@ public class CustomView extends YourView{
         app:cv_dash_line_gap="5dp"
         app:cv_dash_line_height="2dp"
         app:cv_dash_line_length="10dp"
-        app:cv_is_bottom_dash_line="false"
-        app:cv_is_bottom_semicircle="true"
-        app:cv_is_left_dash_line="true"
-        app:cv_is_left_semicircle="false"
-        app:cv_is_right_dash_line="true"
-        app:cv_is_right_semicircle="false"
-        app:cv_is_top_dash_line="false"
-        app:cv_is_top_semicircle="true"
+        app:cv_is_dash_line_bottom="false"
+        app:cv_is_semicircle_bottom="true"
+        app:cv_is_dash_line_left="true"
+        app:cv_is_semicircle_left="false"
+        app:cv_is_dash_line_right="true"
+        app:cv_is_semicircle_right="false"
+        app:cv_is_dash_line_top="false"
+        app:cv_is_semicircle_top="true"
         app:cv_semicircle_color="@android:color/white"
         app:cv_semicircle_gap="8dp"
         app:cv_semicircle_radius="6dp"/>

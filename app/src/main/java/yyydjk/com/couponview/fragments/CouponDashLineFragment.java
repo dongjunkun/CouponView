@@ -32,6 +32,7 @@ public class CouponDashLineFragment extends Fragment {
 
     private CommonAdapter<Integer> commonAdapter;
     private List<Integer> list = new ArrayList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,7 +64,7 @@ public class CouponDashLineFragment extends Fragment {
                 outRect.set(dp2Px(6), dp2Px(6), dp2Px(6), 0);
             }
         });
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         mRecyclerView.setAdapter(commonAdapter);
     }
 
