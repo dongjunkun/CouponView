@@ -80,7 +80,7 @@ dependencies {
     app:cv_semicircle_radius="4dp">
 </yyydjk.com.library.CouponView>
 ~~~
-或者使用代码动态设置
+**或者使用代码动态设置**
 
 ![couponTip.png](/art/couponTip.png)
 
