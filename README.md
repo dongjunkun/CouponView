@@ -21,7 +21,7 @@ allprojects {
 然后在当前模块的build.gradle添加依赖
 ~~~
 dependencies {
-	        compile 'com.github.dongjunkun:CouponView:1.0.2'
+	        compile 'com.github.dongjunkun:CouponView:1.0.3'
 	}
 ~~~
 
