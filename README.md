@@ -76,10 +76,6 @@ dependencies {
 </yyydjk.com.library.CouponView>
 ~~~
 
-##注意事项
- - 可以通过设置padding属性来控制虚线离边缘的距离
- - CouponView是继承于FrameLayout，除了边缘锯齿和虚线边框外，和普通的FrameLayout没有区别
-
 ##定制自己的View
 可以通过CouponViewHelper这个代理类来给其他View（比如LinearLayout,ImageView,TextView）添加锯齿背景，只需要继承其他View然后添加以下代码就可以，完整代码参考[CouponView](https://github.com/dongjunkun/CouponView)
 ~~~
