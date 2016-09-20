@@ -21,7 +21,7 @@ allprojects {
 然后在当前模块的build.gradle添加依赖
 ~~~
 dependencies {
-	        compile 'com.github.dongjunkun:CouponView:1.0.3'
+	    compile 'com.github.dongjunkun:CouponView:1.0.3'
 	}
 ~~~
 
@@ -48,7 +48,8 @@ dependencies {
 |cv_dash_line_margin_left|dimension|左侧虚线距离View左侧的距离|
 |cv_dash_line_margin_right|dimension|右侧虚线距离View右侧的距离|
 
-使用
+##使用
+**添加到你的xml**
 ~~~
 <yyydjk.com.library.CouponView
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -79,6 +80,8 @@ dependencies {
     app:cv_semicircle_radius="4dp">
 </yyydjk.com.library.CouponView>
 ~~~
+或者使用代码动态设置
+![couponTip.png](/art/couponTip.png)
 
 ##定制自己的View
 可以通过CouponViewHelper这个代理类来给其他View（比如LinearLayout,ImageView,TextView）添加锯齿背景，只需要继承其他View然后添加以下代码就可以，完整代码参考[CouponView](https://github.com/dongjunkun/CouponView)
