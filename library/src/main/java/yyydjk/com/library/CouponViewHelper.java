@@ -181,7 +181,7 @@ public class CouponViewHelper {
             semicircleNumY = (int) ((viewHeight - semicircleGap) / (2 * semicircleRadius + semicircleGap));
         }
 
-        if (isDashLineTop || isDashLineBottom && remindDashLineX == 0) {
+        if (isDashLineTop || isDashLineBottom) {
             remindDashLineX = (int) ((viewWidth + dashLineGap - dashLineMarginLeft - dashLineMarginRight) % (dashLineLength + dashLineGap));
             dashLineNumX = (int) ((viewWidth + dashLineGap - dashLineMarginLeft - dashLineMarginRight) / (dashLineLength + dashLineGap));
         }
