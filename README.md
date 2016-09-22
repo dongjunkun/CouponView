@@ -171,6 +171,10 @@ public class CustomView extends YourView{
 
 ![customCoupon.png](http://upload-images.jianshu.io/upload_images/697635-23dffa1ad627a48e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+![coupnView_gif1.gif](/art/coupnView_gif1.gif)
+![coupnView_gif2.gif](/art/coupnView_gif2.gif)
+![coupnView_gif3.gif](/art/coupnView_gif3.gif)
+
 下载demo：[CouponView](http://fir.im/a6ud)
 
 
