@@ -4,14 +4,10 @@
 
 ![preview.png](/art/couponView.png)
 
-![coupnView_gif1.gif](/art/coupnView_gif1.gif)
-![coupnView_gif2.gif](/art/coupnView_gif2.gif)
-![coupnView_gif3.gif](/art/coupnView_gif3.gif)
-
 <h1 align="center">
 <img src="/art/coupnView_gif1.gif" width="280" height="498" alt="coupnView_gif1"/>
-<img src="/art/coupnView_gif2.png" width="280" height="498" alt="coupnView_gif2"/>
-<img src="/art/coupnView_gif3.png" width="280" height="498" alt="coupnView_gif3"/><br/>
+<img src="/art/coupnView_gif2.gif" width="280" height="498" alt="coupnView_gif2"/>
+<img src="/art/coupnView_gif3.gif" width="280" height="498" alt="coupnView_gif3"/><br/>
 
     CouponView
 </h1>
