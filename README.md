@@ -4,6 +4,17 @@
 
 ![preview.png](/art/couponView.png)
 
+![coupnView_gif1.gif](/art/coupnView_gif1.gif)
+![coupnView_gif2.gif](/art/coupnView_gif2.gif)
+![coupnView_gif3.gif](/art/coupnView_gif3.gif)
+
+<h1 align="center">
+<img src="/art/coupnView_gif1.gif" width="280" height="498" alt="coupnView_gif1"/>
+<img src="/art/coupnView_gif2.png" width="280" height="498" alt="coupnView_gif2"/>
+<img src="/art/coupnView_gif3.png" width="280" height="498" alt="coupnView_gif3"/><br/>
+
+    CouponView
+</h1>
 
 我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍后介绍。
 
@@ -171,9 +182,6 @@ public class CustomView extends YourView{
 
 ![customCoupon.png](http://upload-images.jianshu.io/upload_images/697635-23dffa1ad627a48e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![coupnView_gif1.gif](/art/coupnView_gif1.gif)
-![coupnView_gif2.gif](/art/coupnView_gif2.gif)
-![coupnView_gif3.gif](/art/coupnView_gif3.gif)
 
 下载demo：[CouponView](http://fir.im/a6ud)
 
