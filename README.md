@@ -4,6 +4,8 @@
 
 ![preview.png](/art/couponView.png)
 
+我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍后介绍。
+
 <h1 align="center">
 <img src="/art/coupnView_gif1.gif" width="280" height="498" alt="coupnView_gif1"/>
 <img src="/art/coupnView_gif2.gif" width="280" height="498" alt="coupnView_gif2"/>
@@ -12,7 +14,6 @@
     CouponView
 </h1>
 
-我自己遇到的场景是第三种，上面是锯齿，其他三侧均为虚线，当然，还有更多的可以自定义选项，稍后介绍。
 
 ##项目导入
 在android工程根目录的build.gradle添加
