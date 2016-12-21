@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.1'
+    buildToolsVersion '25.0.2'
     defaultConfig {
         applicationId "yyydjk.com.couponview"
         minSdkVersion 14
@@ -25,10 +25,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile project(':library')
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:design:25.0.1'
-    compile 'com.android.support:recyclerview-v7:25.0.1'
-    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.zhy:base-rvadapter:3.0.3'
     testCompile 'junit:junit:4.12'
