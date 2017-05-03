@@ -183,8 +183,13 @@ public class CustomView extends YourView{
 下载demo：[CouponView](http://fir.im/a6ud)
 
 
-参考资料：
- - [[Android 自定义优惠券布局](http://blog.csdn.net/u012162503/article/details/51433490)](http://blog.csdn.net/u012162503/article/details/51433490)
+## 打赏鼓励
+如果你觉得我的项目对你有帮助，请扫描下方的二维码随意打赏，您的支持是我最好的动力!
+<img src="/art/apily.jpg" width="280" height="498" alt="coupnView_gif1"/>
+![](/art/apily.jpg)
+
+ 
+ 
 
 ## Licence
  Copyright 2016 dongjunkun
