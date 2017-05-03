@@ -185,8 +185,8 @@ public class CustomView extends YourView{
 
 ## 打赏鼓励
 如果你觉得我的项目对你有帮助，请扫描下方的二维码随意打赏，您的支持是我最好的动力!
-<img src="/art/apily.jpg" width="280" height="498" alt="coupnView_gif1"/>
-![](/art/apily.jpg)
+
+![](/art/collent_money.png)
 
  
  
